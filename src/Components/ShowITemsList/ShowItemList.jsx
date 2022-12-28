@@ -8,11 +8,11 @@ export default function ShowItemList() {
       {
         transection.length == 0 ? <></> :
 
-          <div className="bg-white  p-4 rounded-md w-4/5  mt-2  border-b-[10px] border-[blue-50] overflow-y-scroll overflow-x-hidden">
+          <div className="bg-white  p-4 rounded-md w-4/5  mt-2  border-b-[10px] border-[blue-50] overflow-y-scroll">
 
-            <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
+            <div className="relative shadow-md sm:rounded-lg">
               <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
                   <tr>
                     <th scope="col" className="py-3 px-6">
                       Reason
@@ -34,8 +34,8 @@ export default function ShowItemList() {
                 <tbody>
                   {transection.map((data) => {
                     return (
-                      <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700" key={data.id}>
-                        <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <tr className="bg-white border-b text-black" key={data.id}>
+                        <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
                           {data.reason}
                         </th>
                         <td className="py-4 px-6">
@@ -44,7 +44,7 @@ export default function ShowItemList() {
                         <td className="py-4 px-6">
                           {data.amount}
                         </td>
-                        <td className="py-4 px-6">
+                        <td className="py-4 px-6 text-xs">
                           {data.date}
                         </td>
                         <td className="py-4 px-6">
